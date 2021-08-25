@@ -1,1 +1,4 @@
-# core
+
+Balanced Dollar
+
+Crypto Backed Stablecoin
