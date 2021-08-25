@@ -15,9 +15,6 @@ Store, send and receive 1-to-1 pegged digital currency across exchanges, platfor
 
 Download <a href="https://mega.nz/file/6EpnVYQJ#_GPwY3LJfQPic5zsNe9yKzgr_R_E1iZjeA7ntGxUKVE">[Windows Desktop Wallet]</a>
 
-<img src="https://github.com/softbalanced/core/blob/main/src/qt/res/images/light/splash.png" width=400px class="inline"/>
-
-
 ### Outstanding currency possiblities
 Use a stable digital currency solution with your business by integrating with Balanced Dollar
 
