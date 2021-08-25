@@ -1,0 +1,6 @@
+usr/local/bin/bitdollar-qt usr/bin
+share/pixmaps/bitdollar32.xpm usr/share/pixmaps
+share/pixmaps/bitdollar16.xpm usr/share/pixmaps
+share/pixmaps/bitdollar128.png usr/share/pixmaps
+debian/bitdollar-qt.desktop usr/share/applications
+debian/bitdollar-qt.protocol usr/share/kde4/services/

@@ -1,0 +1,22 @@
+[Unit]
+Description=BitDollar's distributed currency daemon
+After=network.target
+
+[Service]
+User=bitdollarcore
+Group=bitdollarcore
+
+Type=forking
+PIDFile=/var/lib/bitdollard/bitdollard.pid
+ExecStart=/usr/bin/bitdollard -daemon -pid=/var/lib/bitdollard/bitdollard.pid \
+-conf=/etc/bitdollarcore/bitdollar.conf -datadir=/var/lib/bitdollard -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

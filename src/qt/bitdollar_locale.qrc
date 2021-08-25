@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/bitdollar_ar.qm</file>
+        <file alias="bg">locale/bitdollar_bg.qm</file>
+        <file alias="de">locale/bitdollar_de.qm</file>
+        <file alias="en">locale/bitdollar_en.qm</file>
+        <file alias="es">locale/bitdollar_es.qm</file>
+        <file alias="fi">locale/bitdollar_fi.qm</file>
+        <file alias="fr">locale/bitdollar_fr.qm</file>
+        <file alias="it">locale/bitdollar_it.qm</file>
+        <file alias="ja">locale/bitdollar_ja.qm</file>
+        <file alias="ko">locale/bitdollar_ko.qm</file>
+        <file alias="nl">locale/bitdollar_nl.qm</file>
+        <file alias="pl">locale/bitdollar_pl.qm</file>
+        <file alias="pt">locale/bitdollar_pt.qm</file>
+        <file alias="ru">locale/bitdollar_ru.qm</file>
+        <file alias="sk">locale/bitdollar_sk.qm</file>
+        <file alias="sv">locale/bitdollar_sv.qm</file>
+        <file alias="th">locale/bitdollar_th.qm</file>
+        <file alias="tr">locale/bitdollar_tr.qm</file>
+        <file alias="vi">locale/bitdollar_vi.qm</file>
+        <file alias="zh_CN">locale/bitdollar_zh_CN.qm</file>
+        <file alias="zh_TW">locale/bitdollar_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,4 @@
+qt/qt_libbitdollarqt_a-qrc_bitdollar_locale.o: \
+ qt/qrc_bitdollar_locale.cpp /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
