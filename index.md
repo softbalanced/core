@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Welcome to Balanced Dollar Repo
 
-You can use the [editor on GitHub](https://github.com/softbalanced/core/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Crypto Backed Stablecoin
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### Why Use Balanced Dollar
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Add more capital to your business
 
-```markdown
-Syntax highlighted code block
+Leverage rewards of stable currency on Blockchain
 
-# Header 1
-## Header 2
-### Header 3
+Transact with Digital Currency
 
-- Bulleted
-- List
+Store, send and receive 1-to-1 pegged digital currency across exchanges, platforms, and wallets.
 
-1. Numbered
-2. List
+Download <a href="https://mega.nz/file/6EpnVYQJ#_GPwY3LJfQPic5zsNe9yKzgr_R_E1iZjeA7ntGxUKVE">[Windows Desktop Wallet]</a>
 
-**Bold** and _Italic_ and `Code` text
+<img src="https://github.com/softbalanced/core/blob/main/src/qt/res/images/light/splash.png" width=400px class="inline"/>
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/softbalanced/core/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Outstanding currency possiblities
+Use a stable digital currency solution with your business by integrating with Balanced Dollar
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Email inquery@softbalanced.com
