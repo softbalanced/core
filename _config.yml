@@ -2,3 +2,10 @@ theme: jekyll-theme-minimal
 title: Crypto Backed Stablecoin 
 description: An open source, proof of work masternode-based stablecoin
 avatar: "bitcoin.png"
+
+social-network-links:
+  email: "inquery@softbalanced.com"
+  facebook: softbalanced
+  github: softbalanced
+  twitter: softbalanced
+  youtube: c/softbalanced
