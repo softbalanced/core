@@ -1,4 +1,4 @@
-## Welcome to Balanced Dollar Repo
+## Welcome to Balanced Dollar Repository
 
 Crypto Backed Stablecoin
 
