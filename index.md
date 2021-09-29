@@ -21,6 +21,8 @@ Block explorer <a href="http://softbalanced.com:3001/insight/blocks">[INSIGHT]</
 
 USBL DEX  <a href="https://github.com/KomodoPlatform/atomicDEX-Desktop/releases">[exchange]</a>
 
+USBL exchange  <a href="http://swap.softbalanced.com/">[swap]</a>
+
 ### Outstanding currency possiblities
 Use a stable digital currency solution with your business by integrating with Balanced Dollar
 
