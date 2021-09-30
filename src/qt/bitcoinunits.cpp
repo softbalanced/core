@@ -46,9 +46,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case BTUS: return QString("BTUS");
-            case mBTUS: return QString("mBTUS");
-            case uBTUS: return QString::fromUtf8("μBTUS");
+            case BTUS: return QString("USBL");
+            case mBTUS: return QString("mUSBL");
+            case uBTUS: return QString::fromUtf8("μUSBL");
             case Cent: return QString("Cent");
             default: return QString("???");
         }
@@ -57,9 +57,9 @@ QString BitcoinUnits::name(int unit)
     {
         switch(unit)
         {
-            case BTUS: return QString("tBTUS");
-            case mBTUS: return QString("mtBTUS");
-            case uBTUS: return QString::fromUtf8("μtBTUS");
+            case BTUS: return QString("tUSBL");
+            case mBTUS: return QString("mtUSBL");
+            case uBTUS: return QString::fromUtf8("μtUSBL");
             case Cent: return QString("tCent");
             default: return QString("???");
         }

@@ -137,7 +137,7 @@ QT_TRANSLATE_NOOP("bitdollar-core", ""
 "specified?"),
 QT_TRANSLATE_NOOP("bitdollar-core", ""
 "InstantSend doesn't support sending values that high yet. Transactions are "
-"currently limited to %1 BTUS."),
+"currently limited to %1 USBL."),
 QT_TRANSLATE_NOOP("bitdollar-core", ""
 "InstantSend requires inputs with at least %d confirmations, you might need "
 "to wait a few minutes and try again."),
@@ -440,7 +440,7 @@ QT_TRANSLATE_NOOP("bitdollar-core", "Invalid script detected."),
 QT_TRANSLATE_NOOP("bitdollar-core", "Invalid spork address specified with -sporkaddr"),
 QT_TRANSLATE_NOOP("bitdollar-core", "KeePassHttp id for the established association"),
 QT_TRANSLATE_NOOP("bitdollar-core", "KeePassHttp key for AES encrypted communication with KeePass"),
-QT_TRANSLATE_NOOP("bitdollar-core", "Keep N BTUS anonymized (%u-%u, default: %u)"),
+QT_TRANSLATE_NOOP("bitdollar-core", "Keep N USBL anonymized (%u-%u, default: %u)"),
 QT_TRANSLATE_NOOP("bitdollar-core", "Keep at most <n> unconnectable transactions in memory (default: %u)"),
 QT_TRANSLATE_NOOP("bitdollar-core", "Keep the transaction memory pool below <n> megabytes (default: %u)"),
 QT_TRANSLATE_NOOP("bitdollar-core", "Keypool ran out, please call keypoolrefill first"),

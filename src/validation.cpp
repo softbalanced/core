@@ -2178,7 +2178,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                     // TODO: relay instantsend data/proof.
                     LOCK(cs_main);
                     mapRejectedBlocks.insert(std::make_pair(block.GetHash(), GetTime()));
-                    return state.DoS(10, error("ConnectBlock(BTUS): transaction %s conflicts with transaction lock %s", tx->GetHash().ToString(), hashLocked.ToString()),
+                    return state.DoS(10, error("ConnectBlock(USBL): transaction %s conflicts with transaction lock %s", tx->GetHash().ToString(), hashLocked.ToString()),
                                      REJECT_INVALID, "conflict-tx-lock");
                 }
             }
@@ -2194,12 +2194,12 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
                 // TODO: relay instantsend data/proof.
                 LOCK(cs_main);
                 mapRejectedBlocks.insert(std::make_pair(block.GetHash(), GetTime()));
-                return state.DoS(10, error("ConnectBlock(BTUS): transaction %s conflicts with transaction lock %s", tx->GetHash().ToString(), conflictLock->txid.ToString()),
+                return state.DoS(10, error("ConnectBlock(USBL): transaction %s conflicts with transaction lock %s", tx->GetHash().ToString(), conflictLock->txid.ToString()),
                                  REJECT_INVALID, "conflict-tx-lock");
             }
         }
     } else {
-        LogPrintf("ConnectBlock(BTUS): spork is off, skipping transaction locking checks\n");
+        LogPrintf("ConnectBlock(USBL): spork is off, skipping transaction locking checks\n");
     }
 
     int64_t nTime5_1 = GetTimeMicros(); nTimeISFilter += nTime5_1 - nTime4;
@@ -2215,7 +2215,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
     LogPrint("bench", "      - GetBlockSubsidy: %.2fms [%.2fs]\n", 0.001 * (nTime5_2 - nTime5_1), nTimeSubsidy * 0.000001);
 
     if (!IsBlockValueValid(block, pindex->nHeight, blockReward, strError)) {
-        return state.DoS(0, error("ConnectBlock(BTUS): %s", strError), REJECT_INVALID, "bad-cb-amount");
+        return state.DoS(0, error("ConnectBlock(USBL): %s", strError), REJECT_INVALID, "bad-cb-amount");
     }
 
     int64_t nTime5_3 = GetTimeMicros(); nTimeValueValid += nTime5_3 - nTime5_2;
@@ -2223,7 +2223,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
 
     if (!IsBlockPayeeValid(*block.vtx[0], pindex->nHeight, blockReward)) {
         mapRejectedBlocks.insert(std::make_pair(block.GetHash(), GetTime()));
-        return state.DoS(0, error("ConnectBlock(BTUS): couldn't find masternode or superblock payments"),
+        return state.DoS(0, error("ConnectBlock(USBL): couldn't find masternode or superblock payments"),
                                 REJECT_INVALID, "bad-cb-payee");
     }
 
@@ -2231,7 +2231,7 @@ static bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockInd
     LogPrint("bench", "      - IsBlockPayeeValid: %.2fms [%.2fs]\n", 0.001 * (nTime5_4 - nTime5_3), nTimePayeeValid * 0.000001);
 
     if (!ProcessSpecialTxsInBlock(block, pindex, state, fJustCheck, fScriptChecks)) {
-        return error("ConnectBlock(BTUS): ProcessSpecialTxsInBlock for block %s failed with %s",
+        return error("ConnectBlock(USBL): ProcessSpecialTxsInBlock for block %s failed with %s",
                      pindex->GetBlockHash().ToString(), FormatStateMessage(state));
     }
 
