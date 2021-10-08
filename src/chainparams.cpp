@@ -280,7 +280,7 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x3e;
+        pchMessageStart[0] = 0x4e;
         pchMessageStart[1] = 0x37;
         pchMessageStart[2] = 0x36;
         pchMessageStart[3] = 0xc4;
@@ -288,7 +288,7 @@ public:
         nDefaultPort = 35574;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1621262412, 222642, 0x1e0ffff0, 1, 1 * COIN);
+        genesis = CreateGenesisBlock(1633733908, 3059702, 0x1e0ffff0, 1, 1 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         // calculate main genesis block
         //consensus.hashGenesisBlock = uint256S("0x00");
@@ -311,7 +311,7 @@ public:
             std::cout << "blockhash: " << genesis.GetHash().ToString().c_str() << "\n";
             std::cout << "merklehash: " << genesis.hashMerkleRoot.ToString().c_str() << "\n";
         }
-        assert(consensus.hashGenesisBlock == uint256S("0x00000285639caa52332013763ae247e19dd04cea00625515809855bd9ae5804c"));
+        assert(consensus.hashGenesisBlock == uint256S("0x0000082d66c02694d7517a1c9c594fdac198e5b2b795a51c4ed8af4919b5697c"));
         assert(genesis.hashMerkleRoot == uint256S("0xf2940b292ea6a6e20620d08bc27656b8e445aa5994770feb78a4fe6c762a958c"));
 
 
@@ -356,11 +356,11 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (  0, uint256S("0x00000285639caa52332013763ae247e19dd04cea00625515809855bd9ae5804c"))
+            (  0, uint256S("0x0000082d66c02694d7517a1c9c594fdac198e5b2b795a51c4ed8af4919b5697c"))
         };
 
         chainTxData = ChainTxData{
-            1621262412, // * UNIX timestamp of last known number of transactions (Block 1068571)
+            1633733908, // * UNIX timestamp of last known number of transactions (Block 1068571)
             0,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0         // * estimated number of transactions per second after that timestamp
