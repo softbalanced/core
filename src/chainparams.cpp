@@ -227,7 +227,7 @@ public:
         consensus.nPowTargetTimespan = 10 * 60;
         consensus.nPowTargetSpacing = 5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
-        consensus.fPowNoRetargeting = false;
+        consensus.fPowNoRetargeting = true;
         consensus.nPowKGWHeight = 1;
         consensus.nPowDGWHeight = 1;
         consensus.nRuleChangeActivationThreshold = 2; // 95% of 2
