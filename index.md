@@ -13,7 +13,7 @@ Transact with Digital Currency
 
 Store, send and receive 1-to-1 pegged digital currency across exchanges, platforms, and wallets.
 
-Download <a href="https://mega.nz/file/6EpnVYQJ#_GPwY3LJfQPic5zsNe9yKzgr_R_E1iZjeA7ntGxUKVE">[Windows Desktop Wallet]</a>
+Download <a href="https://github.com/softbalanced/core/releases">[Windows Desktop Wallet]</a>
 
 Whitepaper <a href="https://github.com/softbalanced/core/raw/gh-pages/bdollar_launch_whitepaper.pdf">[PDF]</a>
 
@@ -22,6 +22,8 @@ Block explorer <a href="http://softbalanced.com:3001/insight/blocks">[INSIGHT]</
 USBL DEX  <a href="https://github.com/KomodoPlatform/atomicDEX-Desktop/releases">[exchange]</a>
 
 USBL exchange  <a href="http://swap.softbalanced.com/">[swap]</a>
+
+
 
 ### Outstanding currency possiblities
 Use a stable digital currency solution with your business by integrating with Balanced Dollar
