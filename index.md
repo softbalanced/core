@@ -17,7 +17,7 @@ Download <a href="https://github.com/softbalanced/core/releases">[Windows Deskto
 
 Whitepaper <a href="https://github.com/softbalanced/core/raw/gh-pages/bdollar_launch_whitepaper.pdf">[PDF]</a>
 
-Block explorer <a href="http://softbalanced.com:3001/insight/blocks">[INSIGHT]</a>
+Block explorer <a href="https://softbalanced.com:3001/insight/blocks">[INSIGHT]</a>
 
 USBL DEX  <a href="https://github.com/KomodoPlatform/atomicDEX-Desktop/releases">[exchange]</a>
 
