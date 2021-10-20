@@ -1117,7 +1117,7 @@ void BitcoinGUI::setAdditionalDataSyncProgress(double nSyncProgress)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("BitDollar Core"); // default title
+    QString strTitle = tr("USBL Core"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
