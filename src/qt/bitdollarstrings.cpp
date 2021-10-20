@@ -9,7 +9,7 @@
 #define UNUSED
 #endif
 static const char UNUSED *bitdollar_strings[] = {
-QT_TRANSLATE_NOOP("bitdollar-core", "BitDollar Core"),
+QT_TRANSLATE_NOOP("bitdollar-core", "USBL Core"),
 QT_TRANSLATE_NOOP("bitdollar-core", "The %s developers"),
 QT_TRANSLATE_NOOP("bitdollar-core", ""
 "%s file contains all private keys from this wallet. Do not share it with "
