@@ -646,7 +646,7 @@ std::string HelpMessage(HelpMessageMode mode)
 std::string LicenseInfo()
 {
     const std::string URL_SOURCE_CODE = "<https://github.com/bitdollar>";
-    const std::string URL_WEBSITE = "<http://bitdollar.tk>";
+    const std::string URL_WEBSITE = "<https://softbalanced.com/>";
 
     return CopyrightHolders(_("Copyright (C)"), 2014, COPYRIGHT_YEAR) + "\n" +
            "\n" +
