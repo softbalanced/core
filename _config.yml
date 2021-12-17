@@ -1,13 +1,13 @@
 theme: jekyll-theme-minimal
-title: Crypto Backed Stablecoin 
-description: An open source, proof of work masternode-based stablecoin
+title: Crypto Backed Stablecoin USBL
+description: An open source, 1:1 pegged, fixed rate 
 avatar: "bitcoin.png"
 title-img: "bitcoin.png"
 
 navbar-links:
-  Ecosystem: "https://cryptoslate.com/cryptos/stablecoin/"
-  Comunity: "https://twitter.com/BalancedSoft"
-  Vote: "https://www.btcsquare.net/vote"
+  Ecosystem: "https://dexstats.info/"
+  Comunity: "https://discord.com/invite/HkHyKCjfRQ"
+  Vote: "https://nomics.com/assets/usbl-balanced-dollar/markets"
 
 social-network-links:
   email: "inquery@softbalanced.com"
