@@ -19,9 +19,6 @@ USBL DEX exchange <a href="https://github.com/KomodoPlatform/atomicDEX-Desktop/r
 
 USBL exchange <a href="http://swap.softbalanced.com/">[swap]</a>
 
-Chat <a href="https://discord.com/invite/HkHyKCjfRQ">[discord]</a>
-
-
 ### Outstanding currency possiblities
 
 Use case for stablecoin: enable faster and cheaper transactions, offer a hedge against inflation, 
