@@ -6,8 +6,10 @@ Crypto Backed Stablecoin USBL
 ### Why Use Balanced Dollar
 
 An open source, fixed rate, low volatility, designed to maintain stable value.
-
 Store, send and receive 1-to-1 pegged digital currency across exchanges, platforms, and wallets.
+Annually 5% return for holding, with additional up to 10% liquidity pools fees shared. 
+USBL atomic swap enabled coin, exchange directly with any other coin that listed on dex exchanges. 
+Token stable coin contract created on multiple smart chains enabling backup asset sources. 
 
 Download <a href="https://github.com/softbalanced/core/releases">[Windows Desktop Wallet]</a>
 
