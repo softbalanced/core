@@ -23,7 +23,7 @@ struct SeedSpec6 {
     uint8_t addr[16];
     uint16_t port;
 };
-
+static bool setGenerate = false;
 typedef std::map<int, uint256> MapCheckpoints;
 
 struct CCheckpointData {
