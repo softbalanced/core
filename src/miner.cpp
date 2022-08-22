@@ -673,7 +673,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
          minerThreads = NULL;
      }
 
-     if (nThreads == 0 || !fGenerate)
+     if (nThreads == 0)
          return;
 
      minerThreads = new boost::thread_group();
