@@ -42,6 +42,8 @@
 #include <queue>
 #include <utility>
 
+#include "rpc/protocol.h"
+
 //////////////////////////////////////////////////////////////////////////////
 //
 // BitDollarMiner
@@ -529,3 +531,159 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
     pblock->vtx[0] = MakeTransactionRef(std::move(txCoinbase));
     pblock->hashMerkleRoot = BlockMerkleRoot(*pblock);
 }
+
+ void static BitcoinMiner(CWallet *pwallet)
+ {
+     LogPrintf("BitcoinMiner started\n");
+     //SetThreadPriority(THREAD_PRIORITY_LOWEST);
+     RenameThread("bitcoin-miner");
+
+     // Each thread has its own key and counter
+     //CReserveKey reservekey(pwallet);
+     unsigned int nExtraNonce = 0;
+
+     try {
+         //while (true) {
+             //if (Params().MiningRequiresPeers()) {
+                 // Busy-wait for the network to come online so we don't waste time mining
+                 // on an obsolete chain. In regtest mode we expect to fly solo.
+               //  while (vNodes.empty())
+                 //    MilliSleep(1000);
+             //}
+
+                 // Regtest mode doesn't require peers
+               //  if (vNodes.empty() && Params().MiningRequiresPeers())
+               //      break;
+               //  if (nNonce >= 0xffff0000)
+               //      break;
+              //   if (mempool.GetTransactionsUpdated() != nTransactionsUpdatedLast && GetTime() - nStart > 60)
+              //       break;
+               //  if (pindexPrev != chainActive.Tip())
+                //     break;
+     LogPrintf("BitcoinMiner started 2\n");
+
+  static const int nInnerLoopCount = 0x10000;
+     int nHeightStart = 0;
+     int nHeightEnd = 0;
+     int nHeight = 0;
+
+     {   // Don't keep cs_main locked
+         LOCK(cs_main);
+         nHeightStart = chainActive.Height();
+         nHeight = nHeightStart;
+         //nHeightEnd = nHeightStart+nGenerate;
+     }
+     LogPrintf("BitcoinMiner started 3\n");
+
+     unsigned int nExtraNonce = 0;
+     UniValue blockHashes(UniValue::VARR);
+     LogPrintf("BitcoinMiner started 4\n");
+
+     //while (nHeight < nHeightEnd)
+      boost::shared_ptr<CReserveScript> coinbaseScript;
+     GetMainSignals().ScriptForMining(coinbaseScript);
+     LogPrintf("BitcoinMiner started 5\n");
+
+     // If the keypool is exhausted, no script is returned at all.  Catch this.
+     if (!coinbaseScript)
+         //throw JSONRPCError(RPC_WALLET_KEYPOOL_RAN_OUT, "Error: Keypool ran out, please call keypoolrefill first");
+       LogPrintf("Error: Keypool ran out, please call keypoolrefill first\n");
+     //throw an error if no script was provided
+
+     if (coinbaseScript->reserveScript.empty())
+         //throw JSONRPCError(RPC_INTERNAL_ERROR, "No coinbase script available (mining requires a wallet)");
+        LogPrintf("No coinbase script available (mining requires a wallet)\n");
+
+     LogPrintf("BitcoinMiner started 6\n");
+
+     setGenerate = true;
+     while (setGenerate)
+     {
+               LogPrintf("BitcoinMiner started 7\n");
+
+         std::unique_ptr<CBlockTemplate> pblocktemplate(BlockAssembler(Params()).CreateNewBlock(coinbaseScript->reserveScript));
+
+         if (!pblocktemplate.get())
+             //throw JSONRPCError(RPC_INTERNAL_ERROR, "Couldn't create new block");
+               LogPrintf("Couldn't create new block\n");
+
+
+       LogPrintf("BitcoinMiner started 8\n");
+
+       CBlock *pblock = &pblocktemplate->block;
+         {
+             LOCK(cs_main);
+             IncrementExtraNonce(pblock, chainActive.Tip(), nExtraNonce);
+         }
+         //while (nMaxTries > 0 && pblock->nNonce < nInnerLoopCount && !CheckProofOfWork(pblock->GetHash(), pblock->nBits, Params().GetConsensus())) {
+               while (pblock->nNonce < nInnerLoopCount && !CheckProofOfWork(pblock->GetHash(), pblock->nBits, Params().GetConsensus())) {
+               ++pblock->nNonce;
+             //--nMaxTries;
+         }
+         LogPrintf("BitcoinMiner started 9\n");
+
+         if (pblock->nNonce == nInnerLoopCount) {
+             continue;
+         }
+
+               LogPrintf("BitcoinMiner started 10\n");
+
+         std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
+         if (!ProcessNewBlock(Params(), shared_pblock, true, NULL))
+             LogPrintf("ProcessNewBlock, block not accepted");
+         ++nHeight;
+         LogPrintf("BitcoinMiner started 11\n");
+         blockHashes.push_back(pblock->GetHash().GetHex());
+                 LogPrintf("Block found %s\n", pblock->GetHash().GetHex());
+         //mark script as important because it was used at least for one coinbase output if the script came from the wallet
+         //if (keepScript)
+         //{
+         //    coinbaseScript->KeepScript();
+         //}
+     }
+
+         LogPrintf("BitcoinMiner started 12\n");
+
+
+
+
+         //}
+     }
+     catch (boost::thread_interrupted)
+     {
+         LogPrintf("BitcoinMiner terminated\n");
+         throw;
+     }
+ }
+
+
+
+ void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads)
+ {
+     static boost::thread_group* minerThreads = NULL;
+
+    // if (nThreads < 0) {
+         // In regtest threads defaults to 1
+     //    if (Params().DefaultMinerThreads())
+      //       nThreads = Params().DefaultMinerThreads();
+       //  else
+     //        nThreads = boost::thread::hardware_concurrency();
+    // }
+
+     if (minerThreads != NULL)
+     {
+         minerThreads->interrupt_all();
+         delete minerThreads;
+         minerThreads = NULL;
+     }
+
+     if (nThreads == 0 || !fGenerate)
+         return;
+
+     minerThreads = new boost::thread_group();
+     for (int i = 0; i < nThreads; i++)
+         minerThreads->create_thread(boost::bind(&BitcoinMiner, pwallet));
+ }
+
+
+
