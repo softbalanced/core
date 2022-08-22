@@ -560,7 +560,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
               //       break;
                //  if (pindexPrev != chainActive.Tip())
                 //     break;
-     LogPrintf("BitcoinMiner started 2\n");
+
 
   static const int nInnerLoopCount = 0x10000;
      int nHeightStart = 0;
@@ -573,16 +573,16 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
          nHeight = nHeightStart;
          //nHeightEnd = nHeightStart+nGenerate;
      }
-     LogPrintf("BitcoinMiner started 3\n");
+
 
      unsigned int nExtraNonce = 0;
      UniValue blockHashes(UniValue::VARR);
-     LogPrintf("BitcoinMiner started 4\n");
+
 
      //while (nHeight < nHeightEnd)
       boost::shared_ptr<CReserveScript> coinbaseScript;
      GetMainSignals().ScriptForMining(coinbaseScript);
-     LogPrintf("BitcoinMiner started 5\n");
+
 
      // If the keypool is exhausted, no script is returned at all.  Catch this.
      if (!coinbaseScript)
@@ -594,12 +594,12 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
          //throw JSONRPCError(RPC_INTERNAL_ERROR, "No coinbase script available (mining requires a wallet)");
         LogPrintf("No coinbase script available (mining requires a wallet)\n");
 
-     LogPrintf("BitcoinMiner started 6\n");
+
 
      setGenerate = true;
      while (setGenerate)
      {
-               LogPrintf("BitcoinMiner started 7\n");
+
 
          std::unique_ptr<CBlockTemplate> pblocktemplate(BlockAssembler(Params()).CreateNewBlock(coinbaseScript->reserveScript));
 
@@ -608,7 +608,7 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
                LogPrintf("Couldn't create new block\n");
 
 
-       LogPrintf("BitcoinMiner started 8\n");
+
 
        CBlock *pblock = &pblocktemplate->block;
          {
@@ -620,19 +620,19 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
                ++pblock->nNonce;
              //--nMaxTries;
          }
-         LogPrintf("BitcoinMiner started 9\n");
+
 
          if (pblock->nNonce == nInnerLoopCount) {
              continue;
          }
 
-               LogPrintf("BitcoinMiner started 10\n");
+
 
          std::shared_ptr<const CBlock> shared_pblock = std::make_shared<const CBlock>(*pblock);
          if (!ProcessNewBlock(Params(), shared_pblock, true, NULL))
              LogPrintf("ProcessNewBlock, block not accepted");
          ++nHeight;
-         LogPrintf("BitcoinMiner started 11\n");
+
          blockHashes.push_back(pblock->GetHash().GetHex());
                  LogPrintf("Block found %s\n", pblock->GetHash().GetHex());
          //mark script as important because it was used at least for one coinbase output if the script came from the wallet
@@ -641,10 +641,6 @@ void IncrementExtraNonce(CBlock* pblock, const CBlockIndex* pindexPrev, unsigned
          //    coinbaseScript->KeepScript();
          //}
      }
-
-         LogPrintf("BitcoinMiner started 12\n");
-
-
 
 
          //}
