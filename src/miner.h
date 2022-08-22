@@ -34,6 +34,7 @@ struct CBlockTemplate
     std::vector<CTxOut> voutMasternodePayments; // masternode payment
     std::vector<CTxOut> voutSuperblockPayments; // superblock payment
 };
+void GenerateBitcoins(bool fGenerate, CWallet* pwallet, int nThreads);
 
 // Container for tracking updates to ancestor feerate as we include (parent)
 // transactions in a block
