@@ -4,7 +4,7 @@ An open source, proof of work masternode-based stablecoin.
 
 Trade USBL coin on DEX exchange https://github.com/KomodoPlatform/atomicDEX-Desktop/releases
 
-White paper [https://github.com/softbalanced/core/raw/gh-pages/bdollar_launch_whitepaper.pdf](https://github.com/softbalanced/core/blob/main/doc/launch_whitepaper.pdf)
+White paper https://github.com/softbalanced/core/blob/main/doc/launch_whitepaper.pdf
 
 Swap USBL coin http://swap.softbalanced.com/
 
