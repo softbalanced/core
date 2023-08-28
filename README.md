@@ -6,8 +6,6 @@ Trade USBL coin on DEX exchange https://github.com/KomodoPlatform/atomicDEX-Desk
 
 White paper https://github.com/softbalanced/core/blob/main/doc/launch_whitepaper.pdf
 
-Swap USBL coin http://swap.softbalanced.com/
-
 Desktop wallet https://github.com/softbalanced/core/releases/
 
 Boot strap https://drive.google.com/file/d/18TwLtQjxs2QbX3Z5tW7yeQ1kcuN9YlpI/view?usp=sharing
