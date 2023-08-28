@@ -8,6 +8,8 @@ White paper https://github.com/softbalanced/core/blob/main/doc/launch_whitepaper
 
 Desktop wallet https://github.com/softbalanced/core/releases/
 
+Pitch deck https://github.com/softbalanced/core/blob/main/doc/pitch_deckv6.pdf
+
 Boot strap https://drive.google.com/file/d/18TwLtQjxs2QbX3Z5tW7yeQ1kcuN9YlpI/view?usp=sharing
 
 Contact support https://discord.gg/HkHyKCjfRQ
