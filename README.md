@@ -2,7 +2,7 @@
 Balanced Dollar 
 An open source, proof of work masternode-based stablecoin.
 
-Trade USBL coin on DEX exchange https://github.com/KomodoPlatform/atomicDEX-Desktop/releases
+Trade, Bridge USBL coin, token on DEX exchange https://github.com/KomodoPlatform/atomicDEX-Desktop/releases
 
 White paper https://github.com/softbalanced/core/blob/main/doc/launch_whitepaper.pdf
 
