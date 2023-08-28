@@ -374,6 +374,8 @@ public:
             (  700000, uint256S("0x00000d1a921e476efe5b619def1e0daebbe23391c529ffa781e09f2912a61f7e"))	
             (  800000, uint256S("0x00000599ea2a2692dffd24f8ff6add3fdab42c2e35a57cc63d391a628a01bd30"))	
             (  1800000, uint256S("0x000000bc940523cb490168ed59e3b5321bd11888e54bf3eef559d6d4b2663697"))	
+            (  2000000, uint256S("0x00000a4fc0e4c4c4fcbc0202796c6940f25674717f8032a25090a4c5a584d1a1"))	
+		
 		     
         };
 
