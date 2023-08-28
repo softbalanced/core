@@ -10,6 +10,8 @@ Swap USBL coin http://swap.softbalanced.com/
 
 Desktop wallet https://github.com/softbalanced/core/releases/
 
+Boot strap https://drive.google.com/file/d/18TwLtQjxs2QbX3Z5tW7yeQ1kcuN9YlpI/view?usp=sharing
+
 Contact support https://discord.gg/HkHyKCjfRQ
 
 If you like my work, feel free to support it!
