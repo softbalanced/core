@@ -1144,7 +1144,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         nSubsidyBase = 5000000000;
     }
     else {
-	nSubsidyBase = 1;
+	nSubsidyBase = 100;
     }
 
     CAmount nSubsidy = nSubsidyBase * COIN;
