@@ -1159,6 +1159,7 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
     }
 
     if(nPrevHeight > 2799000) nSubsidy = 100 * COIN;
+    if(nPrevHeight > 2800000) nSubsidy = 0.0001 * COIN;
 	
     // this is only active on devnets
     if (nPrevHeight < consensusParams.nHighSubsidyBlocks) {
